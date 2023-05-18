@@ -1,0 +1,139 @@
+.Banner {
+    .contentBanner {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        position: relative;
+
+        img {
+            width: 100%;
+            object-fit: cover;
+        }
+
+        .infoBanner {
+            position: absolute;
+            margin-right: 20px;
+            @media screen and (max-width: 768px) {
+                backdrop-filter: blur(20px);
+                padding: 20px;
+                border-radius: 20px;
+                margin-right: 0px;
+            }
+            @media screen and (max-width: 425px) {
+                display: none;
+            }
+            h1 {
+                font-weight: 600;
+                font-size: 80px;
+
+                color: #383838;
+                @media screen and (max-width: 1024px) {
+                    font-size: 45px;
+                }
+            }
+
+            h2 {
+                font-weight: 400;
+                font-size: 60px;
+                color: #cf5d00;
+
+                opacity: 0.8;
+                @media screen and (max-width: 1024px) {
+                    font-size: 40px;
+                }
+            }
+            p {
+                font-weight: 500;
+                font-size: 24px;
+                color: #383838;
+
+                opacity: 0.6;
+            }
+            span {
+                font-weight: 700;
+                font-size: 50px;
+                line-height: 75px;
+                opacity: 1;
+                color: #383838;
+            }
+            h2 + p {
+                margin-top: 25px;
+            }
+            button {
+                width: 257px;
+                height: 46px;
+
+                background: linear-gradient(
+                    122.71deg,
+                    #f99500 53.34%,
+                    #ffcd29 133.06%
+                );
+                border: none;
+                border-radius: 3px;
+                cursor: pointer;
+
+                font-weight: 400;
+                font-size: 18px;
+                line-height: 110%;
+
+                color: #ffffff;
+                transition: all 0.3s ease-in-out;
+                &:hover {
+                    scale: 0.9;
+                    color: black;
+                }
+            }
+        }
+    }
+
+    .containerCards {
+        background: linear-gradient(92.46deg, #ff8a29 31.2%, #cf5d00 71.97%);
+
+        .Cards {
+            max-width: 1440px;
+            margin: 0 auto;
+            padding: 20px 20px;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            @media screen and (max-width: 768px) {
+                height: 100%;
+            }
+
+            .card {
+                display: flex;
+                align-items: center;
+                gap: 20px;
+
+                p {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+
+                    font-weight: 400;
+                    font-size: 14px;
+                    line-height: 20px;
+
+                    color: #ffffff;
+
+                    span {
+                        font-weight: bold;
+                    }
+                }
+                @media screen and (max-width: 768px) {
+                    gap: 5px;
+                    padding: 20px 0;
+                    svg {
+                        width: 30px;
+                    }
+                    p {
+                        font-size: 10px;
+                        line-height: normal;
+                    }
+                }
+            }
+        }
+    }
+}
