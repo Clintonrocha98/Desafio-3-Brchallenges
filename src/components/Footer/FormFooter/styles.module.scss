@@ -1,0 +1,131 @@
+.contentForm {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 50px 20px;
+
+    display: flex;
+    align-items: center;
+
+    h1 {
+        font-weight: 700;
+        font-size: 34px;
+        line-height: 48px;
+        color: #ffffff;
+    }
+    .containerSvg {
+        display: flex;
+        position: relative;
+        width: 200px;
+        height: 100%;
+
+        .line {
+            position: absolute;
+            right: 75px;
+            top: -17px;
+        }
+        .arrow {
+            position: absolute;
+            top: 40px;
+        }
+    }
+
+    .contentInput {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        gap: 40px;
+
+        font-size: 18px;
+        color: #ffffff;
+
+        h2 {
+            font-weight: 500;
+            font-size: 20px;
+        }
+
+        .warrapInput {
+            display: flex;
+            gap: 20px;
+
+            .input {
+                display: flex;
+                align-items: center;
+
+                width: 100%;
+
+                gap: 18px;
+
+                border-bottom: 2px solid white;
+
+                input[type="text"] {
+                    border: none;
+                    background: transparent;
+
+                    width: 210px;
+                    height: 32px;
+
+                    font-weight: 400;
+                }
+                input {
+                    font-size: 18px;
+                    line-height: 25px;
+                    color: #ffffff;
+                    font-weight: 400;
+                }
+
+                input::placeholder {
+                    font-size: 18px;
+                    line-height: 25px;
+                    color: #ffffff;
+                    font-weight: 400;
+                    opacity: 0.6;
+                }
+
+                input:focus {
+                    outline: none;
+                }
+            }
+        }
+        .containerCheckbox {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            h2 {
+                font-weight: 500;
+                font-size: 18px;
+            }
+
+            input {
+                appearance: auto;
+            }
+        }
+        button {
+            width: 257px;
+            height: 46px;
+
+            background: linear-gradient(
+                122.71deg,
+                #f99500 53.34%,
+                #ffcd29 133.06%
+            );
+
+            border-radius: 3px;
+            border: none;
+
+            font-weight: 400;
+            font-size: 18px;
+
+            color: #ffffff;
+
+            cursor: pointer;
+
+            transition: all 0.3s ease-in-out;
+
+            &:hover {
+                scale: 0.9;
+                color: black;
+            }
+        }
+    }
+}

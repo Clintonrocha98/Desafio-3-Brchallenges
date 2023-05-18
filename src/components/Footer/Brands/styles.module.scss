@@ -1,0 +1,19 @@
+.brands {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 80px 20px;
+
+    h1 {
+        font-weight: 600;
+        font-size: 34px;
+        line-height: 48px;
+        color: #121212;
+        margin: 0 0 80px 0;
+    }
+
+    .containerBrands {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+    }
+}
