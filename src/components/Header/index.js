@@ -1,74 +1,75 @@
 import Image from "next/image";
 import styles from "./styles.module.scss";
 import logo from "public/assets/logo.png";
+import { MenuMobile } from "./MenuMobile";
 
 export const Header = () => {
     return (
         <>
             <header className={styles.Header}>
-            <div className={styles.topHeader}>
-                <div className={styles.containerTop}>
-                    <span>Loja de Calçados e Moda Online</span>
-                    <div className={styles.infoHeader}>
-                        <span>
-                            <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                width="20"
-                                height="19"
-                                fill="none"
-                                viewBox="0 0 20 19"
-                            >
-                                <path
-                                    stroke="#fff"
-                                    strokeLinecap="round"
-                                    strokeLinejoin="round"
-                                    strokeWidth="2"
-                                    d="M1 15.027V9.51c0-2.195.948-4.3 2.636-5.852C5.324 2.106 7.613 1.234 10 1.234s4.676.872 6.364 2.424C18.052 5.21 19 7.315 19 9.51v5.517"
-                                ></path>
-                                <path
-                                    stroke="#fff"
-                                    strokeLinecap="round"
-                                    strokeLinejoin="round"
-                                    strokeWidth="2"
-                                    d="M19 15.947c0 .488-.21.956-.586 1.3a2.093 2.093 0 01-1.414.54h-1c-.53 0-1.04-.195-1.414-.54a1.767 1.767 0 01-.586-1.3V13.19c0-.488.21-.956.586-1.3a2.093 2.093 0 011.414-.54h3v4.598zm-18 0c0 .488.21.956.586 1.3.375.345.884.54 1.414.54h1c.53 0 1.04-.195 1.414-.54.375-.344.586-.812.586-1.3V13.19c0-.488-.21-.956-.586-1.3A2.093 2.093 0 004 11.348H1v4.598z"
-                                ></path>
-                            </svg>
-                            Fale conosco
-                        </span>
-                        <span>
-                            <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                width="20"
-                                height="23"
-                                fill="none"
-                                viewBox="0 0 20 23"
-                            >
-                                <path
-                                    stroke="#fff"
-                                    strokeLinecap="round"
-                                    strokeLinejoin="round"
-                                    strokeWidth="2"
-                                    d="M19 9.275c0 6.437-9 11.954-9 11.954S1 15.712 1 9.275c0-2.194.948-4.3 2.636-5.851C5.324 1.872 7.613 1 10 1s4.676.872 6.364 2.424C18.052 4.976 19 7.08 19 9.275z"
-                                ></path>
-                                <path
-                                    stroke="#fff"
-                                    strokeLinecap="round"
-                                    strokeLinejoin="round"
-                                    strokeWidth="2"
-                                    d="M10 12.035c1.657 0 3-1.236 3-2.759s-1.343-2.758-3-2.758-3 1.235-3 2.758c0 1.524 1.343 2.759 3 2.759z"
-                                ></path>
-                            </svg>
-                            Encontrar uma loja física
-                        </span>
+                <div className={styles.topHeader}>
+                    <div className={styles.containerTop}>
+                        <span>Loja de Calçados e Moda Online</span>
+                        <div className={styles.infoHeader}>
+                            <span>
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="20"
+                                    height="19"
+                                    fill="none"
+                                    viewBox="0 0 20 19"
+                                >
+                                    <path
+                                        stroke="#fff"
+                                        strokeLinecap="round"
+                                        strokeLinejoin="round"
+                                        strokeWidth="2"
+                                        d="M1 15.027V9.51c0-2.195.948-4.3 2.636-5.852C5.324 2.106 7.613 1.234 10 1.234s4.676.872 6.364 2.424C18.052 5.21 19 7.315 19 9.51v5.517"
+                                    ></path>
+                                    <path
+                                        stroke="#fff"
+                                        strokeLinecap="round"
+                                        strokeLinejoin="round"
+                                        strokeWidth="2"
+                                        d="M19 15.947c0 .488-.21.956-.586 1.3a2.093 2.093 0 01-1.414.54h-1c-.53 0-1.04-.195-1.414-.54a1.767 1.767 0 01-.586-1.3V13.19c0-.488.21-.956.586-1.3a2.093 2.093 0 011.414-.54h3v4.598zm-18 0c0 .488.21.956.586 1.3.375.345.884.54 1.414.54h1c.53 0 1.04-.195 1.414-.54.375-.344.586-.812.586-1.3V13.19c0-.488-.21-.956-.586-1.3A2.093 2.093 0 004 11.348H1v4.598z"
+                                    ></path>
+                                </svg>
+                                Fale conosco
+                            </span>
+                            <span>
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="20"
+                                    height="23"
+                                    fill="none"
+                                    viewBox="0 0 20 23"
+                                >
+                                    <path
+                                        stroke="#fff"
+                                        strokeLinecap="round"
+                                        strokeLinejoin="round"
+                                        strokeWidth="2"
+                                        d="M19 9.275c0 6.437-9 11.954-9 11.954S1 15.712 1 9.275c0-2.194.948-4.3 2.636-5.851C5.324 1.872 7.613 1 10 1s4.676.872 6.364 2.424C18.052 4.976 19 7.08 19 9.275z"
+                                    ></path>
+                                    <path
+                                        stroke="#fff"
+                                        strokeLinecap="round"
+                                        strokeLinejoin="round"
+                                        strokeWidth="2"
+                                        d="M10 12.035c1.657 0 3-1.236 3-2.759s-1.343-2.758-3-2.758-3 1.235-3 2.758c0 1.524 1.343 2.759 3 2.759z"
+                                    ></path>
+                                </svg>
+                                Encontrar uma loja física
+                            </span>
+                        </div>
                     </div>
                 </div>
-            </div>
                 <div className={styles.containerHeader}>
                     <div className={styles.firstPartHeader}>
                         <Image
                             src={logo}
-                            width={297}
-                            height={86}
+                            width="auto"
+                            height="auto"
                             alt="logo da loja"
                         />
                         <div className={styles.containerButtons}>
@@ -134,6 +135,7 @@ export const Header = () => {
                                 Entrar
                             </button>
                         </div>
+                        <MenuMobile />
                     </div>
                     <nav>
                         <ul>

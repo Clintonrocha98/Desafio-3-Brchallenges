@@ -3,13 +3,28 @@
     margin: 0 auto;
     padding: 20px 20px;
 
+    @media screen and (max-width: 768px) {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
     .card {
         display: flex;
         align-items: center;
         gap: 10px;
 
+        @media screen and (max-width: 768px) {
+            flex-direction: column;
+        }
+
         .feminino {
             position: relative;
+            @media screen and (max-width: 425px) {
+                display: flex;
+                align-items: flex-end;
+                justify-content: center;
+            }
             .background {
                 width: 622px;
                 height: 622px;
@@ -21,6 +36,17 @@
                 );
                 border-radius: 3px;
                 transform: rotate(-90deg);
+
+                @media screen and (max-width: 425px) {
+                    width: 385px;
+                    background: linear-gradient(
+                        90deg,
+                        #f57002 3.3%,
+                        rgba(245, 112, 2, 0) 56.06%
+                    );
+
+                    transform: rotate(0);
+                }
             }
             img {
                 border-radius: 3px;
@@ -37,6 +63,11 @@
                 color: #ffffff;
 
                 text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+                @media screen and (max-width: 425px) {
+                    bottom: initial;
+                    left: initial;
+                }
             }
         }
 
@@ -82,11 +113,13 @@
             }
         }
     }
+
     .card2 {
         flex-direction: row-reverse;
-
+        @media screen and (max-width: 768px) {
+            flex-direction: column;
+        }
         .masculino {
-
             .background {
                 background: linear-gradient(
                     172.84deg,
@@ -96,6 +129,17 @@
                 border-radius: 3px;
                 transform: matrix(0, -1, -1, 0, 0, 0);
                 right: 0;
+
+                @media screen and (max-width: 425px) {
+                    width: 385px;
+                    background: linear-gradient(
+                        270deg,
+                        #f57002 3.3%,
+                        rgba(245, 112, 2, 0) 56.06%
+                    );
+
+                    transform: rotate(0);
+                }
             }
 
             h2 {
@@ -103,9 +147,32 @@
                 right: 50px;
             }
         }
-        
+
         .infoCard {
             text-align: left;
+        }
+    }
+
+    @media screen and (max-width: 768px) {
+        .card {
+            .infoCard {
+                text-align: center;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+                button {
+                    margin-top: 10px;
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 425px) {
+    .card {
+        img {
+            width: 100%;
+            object-fit: cover;
         }
     }
 }

@@ -58,7 +58,9 @@
             .containerButtons {
                 gap: 0.5rem;
                 display: flex;
-
+                @media screen and (max-width: 425px) {
+                    display: none;
+                }
                 button {
                     display: flex;
                     align-items: flex-end;
@@ -89,6 +91,9 @@
                 margin: 20px 0;
 
                 color: #383838;
+                @media screen and (max-width: 425px) {
+                    flex-wrap: wrap;
+                }
                 li:hover {
                     cursor: pointer;
                     text-decoration: underline;

@@ -1,7 +1,31 @@
 .contentFooter {
+    display: flex;
+    justify-content: space-between;
+
     max-width: 1440px;
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 50px 20px;
+
+    @media screen and (max-width: 1024px) {
+        gap: 10px;
+    }
+    @media screen and (max-width: 425px) {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .containerColum {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        @media screen and (max-width: 425px) {
+            align-items: stretch;
+            img {
+                align-self: center;
+            }
+        }
+    }
 
     h3 {
         font-weight: 700;
@@ -9,6 +33,19 @@
         line-height: 28px;
 
         color: #383838;
+
+        @media screen and (max-width: 425px) {
+            text-align: center;
+        }
+    }
+    ul {
+        display: flex;
+        gap: 12px;
+        flex-direction: column;
+
+        @media screen and (max-width: 425px) {
+            align-items: center;
+        }
     }
 
     li {
@@ -17,5 +54,61 @@
         line-height: 22px;
         color: #383838;
         opacity: 0.6;
+        cursor: pointer;
+
+        &:hover {
+            opacity: 1;
+            color: black;
+        }
+    }
+
+    .containerLogos {
+        display: grid;
+        align-items: center;
+        justify-items: center;
+        justify-content: space-between;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 20px;
+        @media screen and (max-width: 1024px) {
+            grid-template-columns: 1fr 1fr;
+            gap: 5px;
+        }
+    }
+
+    .containerSocial {
+        display: flex;
+        justify-content: space-between;
+
+        svg {
+            cursor: pointer;
+
+            &:hover {
+                scale: 1.1;
+            }
+        }
+    }
+}
+.finalFooter {
+    background: #383838;
+
+    .content {
+        max-width: 1440px;
+        margin: 0 auto;
+        height: 95px;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        @media screen and (max-width: 425px) {
+            flex-direction: column;
+        }
+
+        h2 {
+            font-weight: 500;
+            font-size: 20px;
+            line-height: 28px;
+            color: #ffffff;
+        }
     }
 }

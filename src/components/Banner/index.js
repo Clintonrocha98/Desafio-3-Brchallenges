@@ -8,8 +8,9 @@ export const Banner = () => {
             <div className={styles.contentBanner}>
                 <Image
                     src={banner}
-                    width={1440}
-                    height={500}
+                    priority={true}
+                    width="auto"
+                    height="auto"
                     alt="logo da Loja"
                     quality={100}
                 />

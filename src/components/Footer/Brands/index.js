@@ -14,29 +14,29 @@ export const Brands = () => {
             <div className={styles.containerBrands}>
                 <Image
                     src={logoAdidas}
-                    width={127.46}
-                    height={86.53}
+                    width="auto"
+                    height="auto"
                     alt="logo de marca"
                     quality={100}
                 />
                 <Image
                     src={logoViamarte}
-                    width={275.51}
-                    height={35}
+                    width="auto"
+                    height="auto"
                     alt="logo de marca"
                     quality={100}
                 />
                 <Image
                     src={logoBebece}
-                    width={212}
-                    height={57}
+                    width="auto"
+                    height="auto"
                     alt="logo de marca"
                     quality={100}
                 />
                 <Image
                     src={logoDumond}
-                    width={231.02}
-                    height={46}
+                    width="auto"
+                    height="auto"
                     alt="logo de marca"
                     quality={100}
                 />

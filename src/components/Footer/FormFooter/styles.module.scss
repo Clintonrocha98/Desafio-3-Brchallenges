@@ -1,8 +1,10 @@
+.background {
+    background: linear-gradient(92.46deg, #ff8a29 31.2%, #cf5d00 71.97%);
+}
 .contentForm {
     max-width: 1440px;
     margin: 0 auto;
     padding: 50px 20px;
-
     display: flex;
     align-items: center;
 
@@ -11,12 +13,19 @@
         font-size: 34px;
         line-height: 48px;
         color: #ffffff;
+        @media screen and (max-width: 768px) {
+            display: none;
+        }
     }
     .containerSvg {
         display: flex;
         position: relative;
         width: 200px;
         height: 100%;
+
+        @media screen and (max-width: 1024px) {
+            display: none;
+        }
 
         .line {
             position: absolute;
@@ -41,11 +50,18 @@
         h2 {
             font-weight: 500;
             font-size: 20px;
+            @media screen and (max-width: 425px) {
+                text-align: center;
+            }
         }
 
         .warrapInput {
             display: flex;
             gap: 20px;
+
+            @media screen and (max-width: 425px) {
+                flex-direction: column;
+            }
 
             .input {
                 display: flex;
@@ -91,6 +107,11 @@
             align-items: center;
             justify-content: space-between;
 
+            @media screen and (max-width: 425px) {
+                flex-direction: column;
+                gap: 10px;
+            }
+
             h2 {
                 font-weight: 500;
                 font-size: 18px;
@@ -121,7 +142,9 @@
             cursor: pointer;
 
             transition: all 0.3s ease-in-out;
-
+            @media screen and (max-width: 425px) {
+                align-self: center;
+            }
             &:hover {
                 scale: 0.9;
                 color: black;

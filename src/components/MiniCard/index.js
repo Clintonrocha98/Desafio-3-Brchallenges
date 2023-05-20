@@ -11,8 +11,8 @@ export const MiniCard = () => {
                     <div className={styles.background}></div>
                     <Image
                         src={calcados}
-                        width={668}
-                        height={622}
+                        width="auto"
+                        height="auto"
                         alt="Mulher experimentando calçados"
                         quality={100}
                     />
@@ -37,8 +37,8 @@ export const MiniCard = () => {
                     <div className={styles.background}></div>
                     <Image
                         src={calcados2}
-                        width={668}
-                        height={622.71}
+                        width="auto"
+                        height="auto"
                         alt="Homem experimentando calçados"
                         quality={100}
                     />

@@ -6,6 +6,7 @@
         position: relative;
 
         img {
+            height: auto;
             width: 100%;
             object-fit: cover;
         }
@@ -14,9 +15,6 @@
             position: absolute;
             margin-right: 20px;
             @media screen and (max-width: 768px) {
-                backdrop-filter: blur(20px);
-                padding: 20px;
-                border-radius: 20px;
                 margin-right: 0px;
             }
             @media screen and (max-width: 425px) {
@@ -58,6 +56,10 @@
             }
             h2 + p {
                 margin-top: 25px;
+                
+                @media screen and (max-width: 768px) {
+                    margin-top: 0px;
+                }
             }
             button {
                 width: 257px;
@@ -100,6 +102,9 @@
 
             @media screen and (max-width: 768px) {
                 height: 100%;
+            }
+            @media screen and (max-width: 425px) {
+                flex-wrap: wrap;
             }
 
             .card {
