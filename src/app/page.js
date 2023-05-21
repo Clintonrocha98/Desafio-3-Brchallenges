@@ -2,6 +2,7 @@
 import { Banner } from "@/components/Banner";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
+import { Highlights } from "@/components/Highlights";
 import { MiniCard } from "@/components/MiniCard";
 import Head from "next/head";
 
@@ -14,6 +15,7 @@ export default function Home() {
             <Header />
             <Banner />
             <MiniCard />
+            <Highlights/>
             <Footer />
         </>
     );

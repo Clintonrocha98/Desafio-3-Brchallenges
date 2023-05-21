@@ -1,0 +1,81 @@
+.containerCard {
+    position: relative;
+    width: 307px;
+    height: 412px;
+    background: #ffffff;
+    box-shadow: 0px 4px 21px rgba(0, 0, 0, 0.1);
+    border-radius: 3px;
+
+    .soldOff {
+        position: absolute;
+        top: 0;
+        background: #cf5d00;
+        border-radius: 3px 3px 0px 0px;
+
+        h3 {
+            font-weight: 700;
+            font-size: 14px;
+            line-height: 20px;
+
+            display: flex;
+            align-items: center;
+            text-align: center;
+
+            color: #ffffff;
+        }
+    }
+
+    svg {
+        position: absolute;
+        right: 0;
+        top: 0;
+        margin: 39.79px 34.1px 0 0;
+        cursor: pointer;
+    }
+
+    .favoriteActive {
+        fill: #cf5d00;
+    }
+
+    .description {
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 20px;
+        color: #121212;
+    }
+
+    .value {
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 28px;
+        color: #121212;
+    }
+
+    .divided {
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 17px;
+        color: #383838;
+        opacity: 0.6;
+    }
+    .buy {
+        width: 257px;
+        height: 46px;
+
+        background: linear-gradient(122.71deg, #f99500 53.34%, #ffcd29 133.06%);
+
+        border-radius: 3px;
+        border: none;
+
+        cursor: pointer;
+
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 110%;
+    }
+    .soldOffButton {
+        font-weight: 600;
+        font-size: 16px;
+        background: #cf5d00;
+    }
+}
