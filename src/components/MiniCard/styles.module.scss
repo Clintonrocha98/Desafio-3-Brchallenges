@@ -55,7 +55,8 @@
                 position: absolute;
                 bottom: 50px;
                 left: 50px;
-
+                
+                font-family: 'Poppins';
                 font-weight: 400;
                 font-size: 48px;
                 line-height: 67px;
@@ -79,7 +80,9 @@
             text-align: right;
 
             color: #383838;
-
+            p {
+                font-family: "Montserrat";
+            }
             span {
                 font-weight: bold;
             }

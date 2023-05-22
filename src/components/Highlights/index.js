@@ -2,12 +2,11 @@ import logo from "public/assets/paqueta-outlet.png";
 import styles from "./styles.module.scss";
 import Image from "next/image";
 import { Card } from "./Card";
-import imagemTeste from "public/assets/teste.png";
 
 export const Highlights = () => {
     return (
         <section className={styles.highlights}>
-            <div className={styles.content}>
+            <div className={styles.warrapHeader}>
                 <div className={styles.header}>
                     <Image
                         src={logo}
@@ -45,13 +44,12 @@ export const Highlights = () => {
                     <button>CONFERIR TUDO</button>
                 </div>
                 <div>
-                    <Card
+                    {/* <Card
                         img={imagemTeste}
                         description="SCARPIN VIZZANO VERDE SALTO ALTO"
-                        fav={true}
                         soldOff={true}
                         value={149.99}
-                    />
+                    /> */}
                 </div>
             </div>
         </section>

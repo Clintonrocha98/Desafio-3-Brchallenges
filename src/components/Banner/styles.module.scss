@@ -4,6 +4,8 @@
         align-items: center;
         justify-content: flex-end;
         position: relative;
+        
+        font-family: 'Poppins';
 
         img {
             height: auto;
@@ -31,6 +33,7 @@
             }
 
             h2 {
+                
                 font-weight: 400;
                 font-size: 60px;
                 color: #cf5d00;

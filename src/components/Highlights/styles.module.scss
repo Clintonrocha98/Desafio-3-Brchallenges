@@ -1,14 +1,16 @@
 .highlights {
     max-width: 1440px;
     margin: 0 auto;
+    padding: 0 20px;
 
-    .content {
+    .warrapHeader {
         .header {
             display: flex;
             align-items: center;
             justify-content: space-between;
 
             h2 {
+                font-family: "Montserrat";
                 text-align: right;
                 font-weight: 400;
                 font-size: 22px;
@@ -47,23 +49,36 @@
                 }
             }
         }
-        .containerCards {
-            .headerCards {
-                display: flex;
-                justify-content: space-between;
-                h2 {
-                    font-weight: 600;
-                    font-size: 34px;
-                    line-height: 48px;
-                    color: #121212;
-                }
-                button {
-                    font-weight: 400;
-                    font-size: 18px;
-                    line-height: 25px;
-                    color: #121212;
-                    background-color: transparent;
-                    border-bottom: 1px solid #cf5d00;
+    }
+    .containerCards {
+        .headerCards {
+            display: flex;
+            justify-content: space-between;
+            padding: 20px 0 20px 0;
+
+            h2 {
+                font-family: "Montserrat";
+                font-weight: 600;
+                font-size: 34px;
+                line-height: 48px;
+                color: #121212;
+            }
+            button {
+                font-family: "Montserrat";
+                font-weight: 400;
+                font-size: 18px;
+                line-height: 25px;
+                color: #121212;
+
+                background-color: transparent;
+
+                border: none;
+                border-bottom: 1px solid #cf5d00;
+
+                cursor: pointer;
+
+                &:hover {
+                    color: #cf5d00;
                 }
             }
         }

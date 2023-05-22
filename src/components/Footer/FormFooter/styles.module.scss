@@ -9,6 +9,7 @@
     align-items: center;
 
     h1 {
+        font-family: "Poppins";
         font-weight: 700;
         font-size: 34px;
         line-height: 48px;
@@ -48,6 +49,8 @@
         color: #ffffff;
 
         h2 {
+            font-family: "Poppins";
+
             font-weight: 500;
             font-size: 20px;
             @media screen and (max-width: 425px) {
@@ -79,10 +82,13 @@
 
                     width: 210px;
                     height: 32px;
+                    font-family: "Poppins";
 
                     font-weight: 400;
                 }
                 input {
+                    font-family: "Poppins";
+
                     font-size: 18px;
                     line-height: 25px;
                     color: #ffffff;
@@ -90,6 +96,8 @@
                 }
 
                 input::placeholder {
+                    font-family: "Poppins";
+
                     font-size: 18px;
                     line-height: 25px;
                     color: #ffffff;
@@ -113,6 +121,7 @@
             }
 
             h2 {
+                font-family: "Poppins";
                 font-weight: 500;
                 font-size: 18px;
             }
@@ -133,7 +142,8 @@
 
             border-radius: 3px;
             border: none;
-
+            
+            font-family: "Poppins";
             font-weight: 400;
             font-size: 18px;
 
