@@ -16,9 +16,10 @@
 
     img {
         align-self: center;
+        object-fit: cover;
     }
 
-    .soldOff {
+    .soldOut {
         display: flex;
         justify-content: center;
         align-items: center;
@@ -59,10 +60,10 @@
         fill: #cf5d00;
     }
 
-    .description {
-        font-family: "Montserrat";
+    .name {
+        font-family: "Poppins";
         font-weight: 500;
-        font-size: 14px;
+        font-size: 20px;
         line-height: 20px;
         color: #121212;
     }
@@ -70,7 +71,7 @@
     .value {
         font-family: "Montserrat";
         font-weight: 700;
-        font-size: 20px;
+        font-size: 25px;
         line-height: 28px;
         color: #121212;
     }
@@ -100,12 +101,15 @@
         line-height: 110%;
         color: #ffffff;
 
+        align-self: center;
+
         transition: all 0.3s ease-in-out;
+
         &:hover {
             scale: 1.1;
         }
     }
-    .soldOffButton {
+    .soldOutButton {
         font-family: "Poppins";
         font-weight: 600;
         font-size: 16px;

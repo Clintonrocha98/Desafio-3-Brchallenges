@@ -1,9 +1,9 @@
 import logo from "public/assets/paqueta-outlet.png";
 import styles from "./styles.module.scss";
 import Image from "next/image";
-import { Card } from "./Card";
+import CardCarrousel from "../Carrousel/CardCarrousel";
 
-export const Highlights = () => {
+function Highlights() {
     return (
         <section className={styles.highlights}>
             <div className={styles.warrapHeader}>
@@ -43,15 +43,10 @@ export const Highlights = () => {
                     <h2>DESTAQUE</h2>
                     <button>CONFERIR TUDO</button>
                 </div>
-                <div>
-                    {/* <Card
-                        img={imagemTeste}
-                        description="SCARPIN VIZZANO VERDE SALTO ALTO"
-                        soldOff={true}
-                        value={149.99}
-                    /> */}
-                </div>
+
+                <CardCarrousel />
             </div>
         </section>
     );
-};
+}
+export default Highlights;

@@ -1,18 +1,11 @@
-"use client"
 import Image from "next/image";
 import styles from "./styles.module.scss";
-import { useState } from "react";
 
-export const Card = ({ img, description, value, soldOff }) => {
-    const [fav, setFav] = useState(false);
-
-    function handleFavorite() {
-        setFav(!fav);
-    }
+export const Card = ({ image, name, value, soldout }) => {
     return (
         <div className={styles.containerCard}>
-            {soldOff && (
-                <div className={styles.soldOff}>
+            {soldout && (
+                <div className={styles.soldOut}>
                     <h3>PRODUTO ESGOTADO</h3>
                 </div>
             )}
@@ -23,8 +16,7 @@ export const Card = ({ img, description, value, soldOff }) => {
                 height="22"
                 fill="none"
                 viewBox="0 0 23 22"
-                className={fav ? styles.favoriteActive : null}
-                onClick={handleFavorite}
+                // className={fav ? styles.favoriteActive : null}
             >
                 <path
                     stroke="#CF5D00"
@@ -35,14 +27,14 @@ export const Card = ({ img, description, value, soldOff }) => {
                 ></path>
             </svg>
             <Image
-                src={img}
-                height="auto"
-                width="auto"
+                src={image}
+                height={150}
+                width={210}
                 quality={100}
-                alt="coração de produto favorito/não favorito"
+                alt={name}
             />
 
-            <h3 className={styles.description}>{description}</h3>
+            <h3 className={styles.name}>{name}</h3>
             <div>
                 <h3 className={styles.value}>R${value}</h3>
                 <p className={styles.divided}>
@@ -50,9 +42,11 @@ export const Card = ({ img, description, value, soldOff }) => {
                 </p>
             </div>
             <button
-                className={`${styles.buy} ${soldOff && styles.soldOffButton}`}
+                className={`${styles.buy} ${
+                    soldout ? styles.soldOutButton : null
+                }`}
             >
-                {soldOff ? "ME AVISE QUANDO CHEGAR" : "COMPRAR"}
+                {soldout ? "ME AVISE QUANDO CHEGAR" : "COMPRAR"}
             </button>
         </div>
     );

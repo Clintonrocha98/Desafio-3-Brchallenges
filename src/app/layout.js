@@ -1,9 +1,7 @@
-"use client";
 import "../styles/reset.scss";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Poppins, Montserrat } from "next/font/google";
-
 
 const montserrat = Montserrat({
     subsets: ["latin"],
@@ -14,20 +12,16 @@ const poppins = Poppins({
     weight: ["400", "500", "600", "700", "900"],
 });
 
-export const metadata = {
-    title: "Paquetá",
-    description:
-        "A Paquetá Calçados é uma renomada marca de calçados que busca expandir sua presença online e oferecer aos seus clientes uma experiência digital atraente e funcional.",
-};
-
 export default function RootLayout({ children }) {
     return (
-        <html lang="pt-BR">
-            <body className={`${poppins.className}${montserrat.className}`}>
-                <Header />
-                {children}
-                <Footer />
-            </body>
-        </html>
+        <>
+            <html lang="pt-BR">
+                <body className={`${poppins.className}${montserrat.className}`}>
+                    <Header />
+                    {children}
+                    <Footer />
+                </body>
+            </html>
+        </>
     );
 }
