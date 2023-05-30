@@ -14,11 +14,16 @@
 
     padding: 20px;
 
-    img {
-        align-self: center;
-        object-fit: cover;
-    }
+    svg {
+        position: absolute;
 
+        right: 0;
+        top: 0;
+
+        margin: 35px 25px 0 0;
+
+        cursor: pointer;
+    }
     .soldOut {
         display: flex;
         justify-content: center;
@@ -44,46 +49,49 @@
             color: #ffffff;
         }
     }
+    a {
+        display: flex;
+        flex-direction: column;
+        text-decoration: none;
+        gap: 20px;
+        
+        img {
+            align-self: center;
+            object-fit: cover;
+        }
 
-    svg {
-        position: absolute;
+        
 
-        right: 0;
-        top: 0;
+        .favoriteActive {
+            fill: #cf5d00;
+        }
 
-        margin: 35px 25px 0 0;
+        .name {
+            font-family: "Poppins";
+            font-weight: 500;
+            font-size: 20px;
+            line-height: 20px;
+            color: #121212;
+        }
 
-        cursor: pointer;
+        .value {
+            font-family: "Montserrat";
+            font-weight: 700;
+            font-size: 25px;
+            line-height: 28px;
+            color: #121212;
+        }
+
+        .divided {
+            font-family: "Montserrat";
+            font-weight: 400;
+            font-size: 12px;
+            line-height: 17px;
+            color: #383838;
+            opacity: 0.6;
+        }
     }
 
-    .favoriteActive {
-        fill: #cf5d00;
-    }
-
-    .name {
-        font-family: "Poppins";
-        font-weight: 500;
-        font-size: 20px;
-        line-height: 20px;
-        color: #121212;
-    }
-
-    .value {
-        font-family: "Montserrat";
-        font-weight: 700;
-        font-size: 25px;
-        line-height: 28px;
-        color: #121212;
-    }
-
-    .divided {
-        font-family: "Montserrat";
-        font-weight: 400;
-        font-size: 12px;
-        line-height: 17px;
-        color: #383838;
-        opacity: 0.6;
-    }
     .buy {
         width: 257px;
         height: 46px;

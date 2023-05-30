@@ -12,6 +12,17 @@ const poppins = Poppins({
     weight: ["400", "500", "600", "700", "900"],
 });
 
+export const metadata = {
+    title: "Paquetá",
+    description:
+        "A Paquetá Calçados é uma renomada marca de calçados que busca expandir sua presença online e oferecer aos seus clientes uma experiência digital atraente e funcional.",
+    icons: {
+        icon: {
+            url: "/assets/favicon.ico",
+            type: "icon",
+        },
+    },
+};
 export default function RootLayout({ children }) {
     return (
         <>

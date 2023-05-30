@@ -1,8 +1,8 @@
-"use client";
 import Image from "next/image";
 import styles from "./styles.module.scss";
 import logo from "public/assets/logo.png";
 import { MenuMobile } from "./MenuMobile";
+import Link from "next/link";
 
 export const Header = () => {
     return (
@@ -67,12 +67,14 @@ export const Header = () => {
                 </div>
                 <div className={styles.containerHeader}>
                     <div className={styles.firstPartHeader}>
-                        <Image
-                            src={logo}
-                            width="auto"
-                            height="auto"
-                            alt="logo da loja"
-                        />
+                        <Link href="/">
+                            <Image
+                                src={logo}
+                                width="auto"
+                                height="auto"
+                                alt="logo da loja"
+                            />
+                        </Link>
                         <div className={styles.containerButtons}>
                             <button aria-label="Lista de desejos">
                                 <svg

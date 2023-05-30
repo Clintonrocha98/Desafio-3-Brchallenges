@@ -87,7 +87,7 @@
             ul {
                 display: flex;
                 justify-content: space-between;
-                
+
                 font-family: "Poppins";
                 font-weight: 500;
                 font-size: 18px;
@@ -98,6 +98,8 @@
                 color: #383838;
                 @media screen and (max-width: 425px) {
                     flex-wrap: wrap;
+                    gap: 10px;
+                    padding: 0 20px;
                 }
                 li:hover {
                     cursor: pointer;

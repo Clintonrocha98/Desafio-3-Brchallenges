@@ -1,0 +1,182 @@
+.productPage {
+    .container {
+        max-width: 1440px;
+        margin: 0 auto;
+        padding: 0 20px;
+        .product {
+            display: flex;
+            font-family: "Montserrat";
+            margin-bottom: 50px;
+            .warrapImage {
+                img {
+                    object-fit: contain;
+                    width: 100%;
+                }
+                .share {
+                    h2 {
+                        font-weight: 400;
+                        font-size: 18px;
+                        line-height: 25px;
+                        color: #383838;
+                        opacity: 0.8;
+                    }
+                    > div {
+                        display: flex;
+                        gap: 15px;
+                        margin-top: 10px;
+                        svg {
+                            transition: all 0.3s ease-in-out;
+                            cursor: pointer;
+                            &:hover {
+                                scale: 0.9;
+                            }
+                        }
+                    }
+                }
+            }
+            .warrapInfo {
+                display: flex;
+                gap: 30px;
+                flex-direction: column;
+                h1 {
+                    font-weight: 600;
+                    font-size: 40px;
+                    line-height: 50px;
+                    color: #121212;
+                }
+                .codProduct {
+                    font-weight: 400;
+                    font-size: 18px;
+                    line-height: 25px;
+                    color: #383838;
+                    opacity: 0.8;
+                }
+                .warrapDiscount {
+                    display: flex;
+                    gap: 20px;
+                    .oldValue {
+                        font-weight: 400;
+                        font-size: 22px;
+                        line-height: 31px;
+                        color: #383838;
+                        text-decoration: line-through;
+                        opacity: 0.8;
+                    }
+                    .discount {
+                        background: #65c239;
+                        border-radius: 3px;
+                        padding: 0 10px;
+                        font-weight: 600;
+                        font-size: 14px;
+                        line-height: 22px;
+
+                        display: flex;
+                        align-items: center;
+                        text-align: center;
+
+                        color: #ffffff;
+                    }
+                }
+
+                .value {
+                    font-weight: 700;
+                    font-size: 40px;
+                    line-height: 56px;
+                    color: #121212;
+                }
+                .division {
+                    font-weight: 500;
+                    font-size: 20px;
+                    line-height: 28px;
+                    color: #383838;
+                    opacity: 0.6;
+                }
+
+                .numbering {
+                    font-weight: 400;
+                    font-size: 18px;
+                    line-height: 25px;
+                    color: #383838;
+
+                    opacity: 0.8;
+                    .warrapNumbers {
+                        display: flex;
+                        gap: 35px;
+                        margin-top: 20px;
+                    }
+                    button {
+                        font-weight: 500;
+                        font-size: 22px;
+                        line-height: 31px;
+
+                        color: #383838;
+
+                        border: 0.723077px solid #383838;
+                        border-radius: 2.16923px;
+                        background: transparent;
+
+                        transition: all 0.3s ease-in-out;
+                        cursor: pointer;
+
+                        &:hover {
+                            scale: 0.9;
+                            color: black;
+                        }
+                    }
+                    .guide {
+                        border: none;
+                        margin-top: 30px;
+
+                        font-weight: 700;
+                        font-size: 16px;
+                        line-height: 22px;
+                        color: #383838;
+                        opacity: 0.6;
+                    }
+                }
+                .buy {
+                    align-self: center;
+                    max-width: 538px;
+                    width: 100%;
+                    height: 67px;
+                    border: none;
+
+                    font-family: "Poppins";
+                    font-weight: 400;
+                    font-size: 33.6887px;
+                    line-height: 110%;
+                    color: #ffffff;
+
+                    background: linear-gradient(
+                        122.71deg,
+                        #f99500 53.34%,
+                        #ffcd29 133.06%
+                    );
+                    border-radius: 5.61479px;
+
+                    cursor: pointer;
+                    transition: all 0.3s ease-in-out;
+
+                    &:hover {
+                        scale: 0.9;
+                        color: black;
+                    }
+                }
+            }
+        }
+        .descriptionProduct {
+            h2 {
+                font-weight: 600;
+                font-size: 40px;
+                line-height: 56px;
+                color: #121212;
+            }
+            p {
+                font-weight: 300;
+                font-size: 22px;
+                line-height: 40px;
+                color: #383838;
+            }
+        }
+    }
+}

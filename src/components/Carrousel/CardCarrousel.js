@@ -38,6 +38,7 @@ async function CardCarrousel() {
                         name={product.name}
                         value={product.price.value}
                         soldout={product.soldout}
+                        href={`/${product.id}`}
                     />
                 </Slide>
             ))}
