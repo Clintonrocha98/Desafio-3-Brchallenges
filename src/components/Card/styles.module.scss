@@ -13,16 +13,13 @@
     border-radius: 3px;
 
     padding: 20px;
-
-    svg {
+    .icon {
         position: absolute;
 
         right: 0;
         top: 0;
 
         margin: 35px 25px 0 0;
-
-        cursor: pointer;
     }
     .soldOut {
         display: flex;
@@ -54,13 +51,11 @@
         flex-direction: column;
         text-decoration: none;
         gap: 20px;
-        
+
         img {
             align-self: center;
             object-fit: cover;
         }
-
-        
 
         .favoriteActive {
             fill: #cf5d00;

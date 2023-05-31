@@ -1,0 +1,14 @@
+.FavoriteIcon {
+    > svg {
+        cursor: pointer;
+
+        transition: all 0.3s ease-in-out;
+
+        &:hover {
+            scale: 0.9;
+        }
+    }
+    .favoriteActive {
+        fill: #cf5d00;
+    }
+}

@@ -1,13 +1,23 @@
 import Image from "next/image";
 import styles from "./styles.module.scss";
+import ShowNumber from "@/components/ShowNumber";
+import FavoriteIcon from "@/components/FavoriteIcon";
+import SizeGuide from "@/components/SizeGuide";
 
 async function Product({ params }) {
     const res = await fetch(
         `https://api.brchallenges.com/api/paqueta/shoe/${params.id}`
     );
     const [product] = await res.json();
+
+    if (!product) {
+        return <div>Loading...</div>;
+    }
+
     const discountedValue =
-        product.price.value - product.price.discount * product.price.value;
+        product?.price?.value -
+        product?.price?.discount * product?.price?.value;
+    const formattedDiscount = (product?.price?.discount * 100).toFixed(0);
 
     return (
         <section className={styles.productPage}>
@@ -15,11 +25,11 @@ async function Product({ params }) {
                 <div className={styles.product}>
                     <div className={styles.warrapImage}>
                         <Image
-                            src={product.image}
+                            src={product?.image}
                             height={703.41}
                             width={521.18}
                             quality={100}
-                            alt={product.name}
+                            alt={product?.name}
                         />
                         <div className={styles.share}>
                             <h2>Compartilhe</h2>
@@ -116,23 +126,22 @@ async function Product({ params }) {
                     </div>
 
                     <div className={styles.warrapInfo}>
-                        {/* coração */}
                         <span>
-                            <h1>{product.name}</h1>
+                            <FavoriteIcon product={product?.name} />
+                            <h1>{product?.name}</h1>
                             <p className={styles.codProduct}>
-                                Código do produto: {product.id}
+                                Código do produto: {product?.id}
                             </p>
                         </span>
 
-                        {product.price.discount > 0.0 ? (
+                        {formattedDiscount > 0 ? (
                             <div>
                                 <div className={styles.warrapDiscount}>
                                     <p className={styles.oldValue}>
                                         R${product.price.value}
                                     </p>
                                     <p className={styles.discount}>
-                                        {product.price.discount * 100}% DE
-                                        DESCONTO
+                                        {formattedDiscount}% DE DESCONTO
                                     </p>
                                 </div>
                                 <p className={styles.value}>
@@ -145,35 +154,33 @@ async function Product({ params }) {
                         ) : (
                             <div>
                                 <p className={styles.value}>
-                                    R${product.price.value}
+                                    R${product?.price?.value}
                                 </p>
                                 <p className={styles.division}>
                                     ou 10x R$
-                                    {(product.price.value / 10).toFixed(2)}
+                                    {(product?.price?.value / 10).toFixed(2)}
                                 </p>
                             </div>
                         )}
                         <div className={styles.numbering}>
                             <h2>Escolha a numeração: </h2>
                             <div className={styles.warrapNumbers}>
-                                <button>34</button>
-                                <button>35</button>
-                                <button>36</button>
-                                <button>37</button>
-                                <button>38</button>
-                                <button>39</button>
-                                <button>40</button>
+                                <ShowNumber number={34} />
+                                <ShowNumber number={35} />
+                                <ShowNumber number={36} />
+                                <ShowNumber number={37} />
+                                <ShowNumber number={38} />
+                                <ShowNumber number={39} />
+                                <ShowNumber number={40} />
                             </div>
-                            <button className={styles.guide}>
-                                Guia de tamanhos
-                            </button>
+                            <SizeGuide />
                         </div>
                         <button className={styles.buy}>COMPRAR</button>
                     </div>
                 </div>
                 <div className={styles.descriptionProduct}>
                     <h2>DESCRIÇÃO DO PRODUTO</h2>
-                    <p>{product.description}</p>
+                    <p>{product?.description}</p>
                 </div>
             </div>
         </section>

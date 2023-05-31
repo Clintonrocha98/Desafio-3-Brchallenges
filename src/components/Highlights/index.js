@@ -2,6 +2,7 @@ import logo from "public/assets/paqueta-outlet.png";
 import styles from "./styles.module.scss";
 import Image from "next/image";
 import CardCarrousel from "../Carrousel/CardCarrousel";
+import ShowNumber from "../ShowNumber";
 
 function Highlights() {
     return (
@@ -23,18 +24,18 @@ function Highlights() {
                 </div>
 
                 <div className={styles.containerNumbers}>
-                    <button>33</button>
-                    <button>34</button>
-                    <button>35</button>
-                    <button>36</button>
-                    <button>37</button>
-                    <button>38</button>
-                    <button>39</button>
-                    <button>40</button>
-                    <button>41</button>
-                    <button>42</button>
-                    <button>43</button>
-                    <button>44</button>
+                    <ShowNumber number={33} />
+                    <ShowNumber number={34} />
+                    <ShowNumber number={35} />
+                    <ShowNumber number={36} />
+                    <ShowNumber number={37} />
+                    <ShowNumber number={38} />
+                    <ShowNumber number={39} />
+                    <ShowNumber number={40} />
+                    <ShowNumber number={41} />
+                    <ShowNumber number={42} />
+                    <ShowNumber number={43} />
+                    <ShowNumber number={44} />
                 </div>
             </div>
 

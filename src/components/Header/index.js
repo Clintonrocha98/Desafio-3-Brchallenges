@@ -1,7 +1,6 @@
 import Image from "next/image";
 import styles from "./styles.module.scss";
 import logo from "public/assets/logo.png";
-import { MenuMobile } from "./MenuMobile";
 import Link from "next/link";
 
 export const Header = () => {
@@ -138,7 +137,7 @@ export const Header = () => {
                                 Entrar
                             </button>
                         </div>
-                        <MenuMobile />
+                        
                     </div>
                     <nav>
                         <ul>
