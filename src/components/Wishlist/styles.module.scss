@@ -54,16 +54,17 @@
         top: 0;
         right: 0;
         width: 500px;
-        height: 100vh;
+        height: 100%;
         z-index: 2;
-        background-color: blue;
+        background-color: white;
         .modal {
+            height: 100%;
             .headerModal {
                 display: flex;
                 align-items: center;
                 justify-content: space-between;
                 padding: 20px;
-                h2{
+                h2 {
                     font-family: "Poppins";
                     font-size: 32px;
                     font-weight: bold;
@@ -78,11 +79,49 @@
                     }
                 }
             }
-            // .containerContent{
-            //     .favoriteCard{
+            .containerContent {
+                height: 90%;
+                overflow-y: scroll;
+                display: flex;
+                gap: 5px;
+                flex-direction: column;
+                padding: 20px;
+                .favoriteCard {
+                    position: relative;
 
-            //     }
-            // }
+                    border-bottom: 1px solid #ff8a29;
+
+                    .icon {
+                        position: absolute;
+                        top: 0;
+                        right: 0;
+                    }
+                    a {
+                        display: flex;
+                        align-items: center;
+                        text-decoration: none;
+                        .infoContent {
+                            .title {
+                                font-weight: 700;
+                                font-size: 16px;
+                                color: black;
+                            }
+                            .id {
+                                font-weight: 400;
+                                font-size: 12px;
+                                line-height: 17px;
+                                color: #383838;
+                                opacity: 0.6;
+                            }
+                            .value {
+                                font-weight: 700;
+                                font-size: 22px;
+                                color: black;
+                            }
+                        }
+                    }
+                }
+            }
         }
     }
 }

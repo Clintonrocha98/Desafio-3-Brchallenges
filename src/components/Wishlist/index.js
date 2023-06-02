@@ -4,6 +4,7 @@ import { LocalStorageContext } from "@/hooks/useLocalStorage";
 import styles from "./styles.module.scss";
 import Image from "next/image";
 import FavoriteIcon from "../FavoriteIcon";
+import Link from "next/link";
 
 function WishList() {
     const [isOpen, setIsOpen] = useState(false);
@@ -88,23 +89,25 @@ function WishList() {
                             </svg>
                         </div>
                         <div className={styles.containerContent}>
-                            {/* {products.map((product) => (
-                                <div className={styles.favoriteCard}>
-                                    <FavoriteIcon product={product.name} />
-                                    <Image
-                                        src={product.image}
-                                        height={150}
-                                        width={210}
-                                        quality={100}
-                                        alt={product.name}
-                                    />
-                                    <div>
-                                        <h2>{product.name}</h2>
-                                        <p>código do produto: {product.id}</p>
-                                        <p>R${product.price.value}</p>
-                                    </div>
+                            {products.map((product) => (
+                                <div className={styles.favoriteCard} key={product.id}>
+                                    <span className={styles.icon}><FavoriteIcon product={product.name} /></span>
+                                    <Link href={product.id}>
+                                        <Image
+                                            src={product.image}
+                                            height={150}
+                                            width={150}
+                                            quality={100}
+                                            alt={product.name}
+                                        />
+                                        <div className={styles.infoContent}>
+                                            <h2 className={styles.title}>{product.name}</h2>
+                                            <p className={styles.id}>{product.id}</p>
+                                            <p className={styles.value}>R${product.price.value}</p>
+                                        </div>
+                                    </Link>
                                 </div>
-                            ))} */}
+                            ))}
                         </div>
                     </div>
                 </div>
