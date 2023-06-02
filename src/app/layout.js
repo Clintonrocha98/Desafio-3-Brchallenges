@@ -2,6 +2,7 @@ import "../styles/reset.scss";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Poppins, Montserrat } from "next/font/google";
+import { LocalStorageProvider } from "@/hooks/useLocalStorage";
 
 const montserrat = Montserrat({
     subsets: ["latin"],
@@ -28,9 +29,11 @@ export default function RootLayout({ children }) {
         <>
             <html lang="pt-BR">
                 <body className={`${poppins.className}${montserrat.className}`}>
-                    <Header />
-                    {children}
-                    <Footer />
+                    <LocalStorageProvider>
+                        <Header />
+                        {children}
+                        <Footer />
+                    </LocalStorageProvider>
                 </body>
             </html>
         </>

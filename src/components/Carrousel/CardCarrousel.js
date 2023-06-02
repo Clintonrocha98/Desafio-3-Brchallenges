@@ -1,6 +1,5 @@
-"use client";
+import { Slider, Slide } from "../Slider/index";
 import { Card } from "../Card";
-import { Slide, Slider } from "../Slider/index";
 
 async function CardCarrousel() {
     const res = await fetch("https://api.brchallenges.com/api/paqueta/shoes");
@@ -45,4 +44,5 @@ async function CardCarrousel() {
         </Slider>
     );
 }
+
 export default CardCarrousel;

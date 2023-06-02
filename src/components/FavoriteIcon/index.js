@@ -1,40 +1,26 @@
 "use client";
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import styles from "./styles.module.scss";
+import { LocalStorageContext } from "@/hooks/useLocalStorage";
 
 const FavoriteIcon = (product) => {
     const [isProductSaved, setIsProductSaved] = useState(false);
+    const { savedProducts, saveProduct } = useContext(LocalStorageContext);
 
     useEffect(() => {
-        const savedProducts =
-            JSON.parse(localStorage.getItem("products")) || [];
-
         const isSaved = savedProducts.some(
             (savedProduct) => savedProduct.product === product.product
         );
 
         setIsProductSaved(isSaved);
-    }, [product]);
+    }, [savedProducts, product]);
 
     const handleSave = () => {
         if (typeof window === "undefined") {
             return;
         }
 
-        const savedProducts =
-            JSON.parse(localStorage.getItem("products")) || [];
-
-        const existingProductIndex = savedProducts.findIndex(
-            (savedProduct) => savedProduct.product === product.product
-        );
-
-        if (existingProductIndex > -1) {
-            savedProducts.splice(existingProductIndex, 1);
-        } else {
-            savedProducts.push(product);
-        }
-
-        localStorage.setItem("products", JSON.stringify(savedProducts));
+        saveProduct(product);
         setIsProductSaved(!isProductSaved);
     };
     return (

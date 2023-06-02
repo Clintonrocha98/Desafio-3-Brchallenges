@@ -2,6 +2,7 @@ import Image from "next/image";
 import styles from "./styles.module.scss";
 import logo from "public/assets/logo.png";
 import Link from "next/link";
+import WishList from "../Wishlist";
 
 export const Header = () => {
     return (
@@ -75,24 +76,7 @@ export const Header = () => {
                             />
                         </Link>
                         <div className={styles.containerButtons}>
-                            <button aria-label="Lista de desejos">
-                                <svg
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    width="30"
-                                    height="29"
-                                    fill="none"
-                                    viewBox="0 0 30 29"
-                                >
-                                    <path
-                                        stroke="#383838"
-                                        strokeLinecap="round"
-                                        strokeLinejoin="round"
-                                        strokeWidth="2"
-                                        d="M26.84 3.387a7.365 7.365 0 00-2.39-1.767A6.762 6.762 0 0021.63 1c-.967 0-1.926.21-2.82.62a7.366 7.366 0 00-2.39 1.767L15 4.957l-1.42-1.57c-1.382-1.528-3.257-2.386-5.211-2.386-1.954 0-3.829.858-5.21 2.386C1.775 4.915 1 6.987 1 9.147c0 2.162.776 4.234 2.158 5.762l1.42 1.57L15 28 25.42 16.478l1.42-1.57a8.251 8.251 0 001.598-2.642c.37-.989.561-2.048.561-3.118 0-1.07-.19-2.13-.561-3.118a8.25 8.25 0 00-1.598-2.643v0z"
-                                    ></path>
-                                </svg>
-                                Lista de desejos
-                            </button>
+                            <WishList />
                             <button aria-label="Sacola">
                                 <svg
                                     xmlns="http://www.w3.org/2000/svg"
@@ -137,7 +121,6 @@ export const Header = () => {
                                 Entrar
                             </button>
                         </div>
-                        
                     </div>
                     <nav>
                         <ul>

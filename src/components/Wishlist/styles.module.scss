@@ -1,0 +1,88 @@
+.wishList {
+    .favoriteButton {
+        display: flex;
+        align-items: flex-end;
+        border: none;
+
+        background: transparent;
+
+        gap: 5px;
+
+        cursor: pointer;
+
+        .text {
+            font-family: "Poppins";
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 20px;
+            color: #383838;
+        }
+
+        &:hover {
+            text-decoration: underline;
+        }
+        .icon {
+            position: relative;
+
+            .count {
+                left: 20px;
+                bottom: 20px;
+
+                background: linear-gradient(
+                    133.49deg,
+                    #f99500 21.3%,
+                    #ffcd29 133.37%
+                );
+
+                width: 20px;
+                height: 20px;
+
+                border-radius: 10px;
+
+                position: absolute;
+
+                font-family: "Poppins";
+                font-weight: 400;
+                font-size: 12px;
+                line-height: 17px;
+                color: #ffffff;
+            }
+        }
+    }
+    .modalContainer {
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 500px;
+        height: 100vh;
+        z-index: 2;
+        background-color: blue;
+        .modal {
+            .headerModal {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                padding: 20px;
+                h2{
+                    font-family: "Poppins";
+                    font-size: 32px;
+                    font-weight: bold;
+                    text-transform: uppercase;
+                    color: black;
+                }
+                svg {
+                    transition: all 0.3s ease-in-out;
+                    cursor: pointer;
+                    &:hover {
+                        scale: 0.9;
+                    }
+                }
+            }
+            // .containerContent{
+            //     .favoriteCard{
+
+            //     }
+            // }
+        }
+    }
+}
