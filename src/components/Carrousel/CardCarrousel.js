@@ -1,3 +1,4 @@
+'use client'
 import { Slider, Slide } from "../Slider/index";
 import { Card } from "../Card";
 
