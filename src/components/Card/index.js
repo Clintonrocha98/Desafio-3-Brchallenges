@@ -2,8 +2,10 @@ import Image from "next/image";
 import styles from "./styles.module.scss";
 import Link from "next/link";
 import FavoriteIcon from "../FavoriteIcon";
+import BuyButton from "../BuyButton";
 
 export const Card = ({ image, name, value, soldout, href }) => {
+
     return (
         <div className={styles.containerCard}>
             {soldout && (
@@ -31,13 +33,7 @@ export const Card = ({ image, name, value, soldout, href }) => {
                     </p>
                 </div>
             </Link>
-            <button
-                className={`${styles.buy} ${
-                    soldout ? styles.soldOutButton : null
-                }`}
-            >
-                {soldout ? "ME AVISE QUANDO CHEGAR" : "COMPRAR"}
-            </button>
+            <BuyButton product={name} soldout={soldout} removeBuy={false} />
         </div>
     );
 };

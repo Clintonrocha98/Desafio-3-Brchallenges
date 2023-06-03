@@ -5,23 +5,21 @@ import { LocalStorageContext } from "@/hooks/useLocalStorage";
 
 const FavoriteIcon = (product) => {
     const [isProductSaved, setIsProductSaved] = useState(false);
-    const { savedProducts, saveProduct } = useContext(LocalStorageContext);
-
+    const { favoriteProductsOnLocalStorage, saveProductToLocalStorage } = useContext(LocalStorageContext);
+   
     useEffect(() => {
-        const isSaved = savedProducts.some(
-            (savedProduct) => savedProduct.product === product.product
+        const isSaved = favoriteProductsOnLocalStorage.some(
+            (savedProduct) => savedProduct === product.product
         );
-
         setIsProductSaved(isSaved);
-    }, [savedProducts, product]);
+    }, [favoriteProductsOnLocalStorage, product]);
 
     const handleSave = () => {
         if (typeof window === "undefined") {
             return;
         }
-
-        saveProduct(product);
         setIsProductSaved(!isProductSaved);
+        saveProductToLocalStorage(product.product);
     };
     return (
         <div className={styles.FavoriteIcon}>

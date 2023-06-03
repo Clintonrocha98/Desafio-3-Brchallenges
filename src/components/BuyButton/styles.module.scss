@@ -1,0 +1,37 @@
+.buy {
+    width: 257px;
+    height: 46px;
+
+    background: linear-gradient(122.71deg, #f99500 53.34%, #ffcd29 133.06%);
+
+    border-radius: 3px;
+    border: none;
+
+    cursor: pointer;
+
+    font-family: "Montserrat";
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 110%;
+    color: #ffffff;
+
+    align-self: center;
+
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+        scale: 1.1;
+    }
+}
+.soldOutButton {
+    font-family: "Poppins";
+    font-weight: 600;
+    font-size: 16px;
+    background: #cf5d00;
+}
+.inCart {
+    font-family: "Poppins";
+    font-weight: 600;
+    font-size: 16px;
+    background: #cf5d00;
+}

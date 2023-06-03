@@ -10,9 +10,9 @@ function WishList() {
     const [isOpen, setIsOpen] = useState(false);
     const [products, setProducts] = useState([]);
 
-    const { savedProducts } = useContext(LocalStorageContext);
+    const { favoriteProductsOnLocalStorage } = useContext(LocalStorageContext);
 
-    const productCount = savedProducts.length;
+    const productCount = favoriteProductsOnLocalStorage.length;
 
     const openModal = () => {
         setIsOpen(true);
@@ -30,10 +30,10 @@ function WishList() {
             const data = await res.json();
 
             let filteredProducts = data;
-            if (savedProducts && savedProducts.length > 0) {
+            if (favoriteProductsOnLocalStorage && favoriteProductsOnLocalStorage.length > 0) {
                 filteredProducts = data.filter((product) => {
-                    return savedProducts.some(
-                        (filterItem) => filterItem.product === product.name
+                    return favoriteProductsOnLocalStorage.some(
+                        (filterItem) => filterItem === product.name
                     );
                 });
             }
@@ -42,7 +42,7 @@ function WishList() {
         };
 
         fetchProducts();
-    }, [savedProducts]);
+    }, [favoriteProductsOnLocalStorage]);
 
     return (
         <div className={styles.wishList}>
@@ -91,15 +91,16 @@ function WishList() {
                         <div className={styles.containerContent}>
                             {products.map((product) => (
                                 <div className={styles.favoriteCard} key={product.id}>
+                                    
                                     <span className={styles.icon}><FavoriteIcon product={product.name} /></span>
+                                    <Image
+                                        src={product.image}
+                                        height={150}
+                                        width={150}
+                                        quality={100}
+                                        alt={product.name}
+                                    />
                                     <Link href={product.id}>
-                                        <Image
-                                            src={product.image}
-                                            height={150}
-                                            width={150}
-                                            quality={100}
-                                            alt={product.name}
-                                        />
                                         <div className={styles.infoContent}>
                                             <h2 className={styles.title}>{product.name}</h2>
                                             <p className={styles.id}>{product.id}</p>

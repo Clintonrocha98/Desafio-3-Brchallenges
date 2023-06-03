@@ -1,12 +1,16 @@
 .guide {
     border: none;
     margin-top: 30px;
-
+    background: transparent;
     font-weight: 700;
     font-size: 16px;
     line-height: 22px;
     color: #383838;
     opacity: 0.6;
+    &:hover{
+        cursor: pointer;
+        text-decoration: underline;
+    }
 }
 .modalContainer {
     position: fixed;

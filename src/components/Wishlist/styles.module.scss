@@ -57,8 +57,21 @@
         height: 100%;
         z-index: 2;
         background-color: white;
+
+        transition: all 0.3s ease-in-out;
+        animation: moverElemento ease-in-out 0.3s;
+        @keyframes moverElemento {
+            0% {
+                transform: translateX(100%);
+            }
+            100% {
+                transform: translateX(0);
+            }
+        }
+
         .modal {
             height: 100%;
+
             .headerModal {
                 display: flex;
                 align-items: center;
@@ -86,20 +99,38 @@
                 gap: 5px;
                 flex-direction: column;
                 padding: 20px;
+
                 .favoriteCard {
+                    display: flex;
+                    align-items: center;
                     position: relative;
-
-                    border-bottom: 1px solid #ff8a29;
-
+                    // &:hover {
+                    //     animation: shadow-pop-bl 0.3s
+                    //         cubic-bezier(0.47, 0, 0.745, 0.715) both;
+                    // }
+                    // @keyframes shadow-pop-bl {
+                    //     0% {
+                    //         box-shadow: 0 0 #ff8a29, 0 0 #ff8a29, 0 0 #ff8a29,
+                    //             0 0 #ff8a29, 0 0 #ff8a29, 0 0 #ff8a29,
+                    //             0 0 #ff8a29, 0 0 #ff8a29;
+                    //         transform: translateX(0) translateY(0);
+                    //     }
+                    //     100% {
+                    //         box-shadow: -1px 1px #ff8a29, -2px 2px #ff8a29,
+                    //             -3px 3px #ff8a29, -4px 4px #ff8a29,
+                    //             -5px 5px #ff8a29, -6px 6px #ff8a29,
+                    //             -7px 7px #ff8a29, -8px 8px #ff8a29;
+                    //         transform: translateX(8px) translateY(-8px);
+                    //     }
+                    // }
                     .icon {
                         position: absolute;
                         top: 0;
                         right: 0;
                     }
                     a {
-                        display: flex;
-                        align-items: center;
                         text-decoration: none;
+
                         .infoContent {
                             .title {
                                 font-weight: 700;
