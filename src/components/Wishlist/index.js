@@ -30,15 +30,18 @@ function WishList() {
             const data = await res.json();
 
             let filteredProducts = data;
+
             if (favoriteProductsOnLocalStorage && favoriteProductsOnLocalStorage.length > 0) {
                 filteredProducts = data.filter((product) => {
                     return favoriteProductsOnLocalStorage.some(
                         (filterItem) => filterItem === product.name
                     );
                 });
+                setProducts(filteredProducts);
+            } else {
+                setProducts([])
             }
 
-            setProducts(filteredProducts);
         };
 
         fetchProducts();
@@ -89,9 +92,9 @@ function WishList() {
                             </svg>
                         </div>
                         <div className={styles.containerContent}>
-                            {products.map((product) => (
+                            {products === [] || products.length === 0 ? <h2>Confira nossos produtos🤩</h2> : products.map((product) => (
                                 <div className={styles.favoriteCard} key={product.id}>
-                                    
+
                                     <span className={styles.icon}><FavoriteIcon product={product.name} /></span>
                                     <Image
                                         src={product.image}
