@@ -1,0 +1,93 @@
+.cartPage {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 20px;
+
+    font-family: "Montserrat";
+
+    .headerPage {
+        p {
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 25px;
+            color: #383838;
+            a {
+                font-weight: 400;
+                opacity: 0.6;
+                text-decoration: none;
+            }
+        }
+        h2 {
+            font-weight: 700;
+            font-size: 34px;
+            line-height: 48px;
+            color: #121212;
+        }
+    }
+    .contentPage {
+        display: flex;
+        gap: 20px;
+        padding: 20px;
+
+        background: #3838381c;
+        border-radius: 10px;
+
+        > h3 {
+            font-weight: 700;
+            font-size: 34px;
+            line-height: 48px;
+            color: #121212;
+        }
+        .warrapCards {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            width: 100%;
+            .card {
+                display: flex;
+                align-items: flex-start;
+                justify-content: space-between;
+                width: 100%;
+                gap: 20px;
+                border-bottom: 1px solid #cf5d00;
+                a {
+                    display: flex;
+                    gap: 10px;
+                    text-decoration: none;
+                    .infoContent {
+                        display: flex;
+                        flex-direction: column;
+                        gap: 10px;
+                        .title {
+                            font-weight: 700;
+                            font-size: 30px;
+                            line-height: 42px;
+                            color: #121212;
+                        }
+                        .id {
+                            font-weight: 400;
+                            font-size: 18px;
+                            line-height: 25px;
+                            color: #383838;
+                            opacity: 0.8;
+                        }
+                        .value {
+                            font-weight: 700;
+                            font-size: 20px;
+                            line-height: 28px;
+                            color: #383838;
+                        }
+                        .last {
+                            margin-bottom: 10px;
+                        }
+                    }
+                }
+                .icons {
+                    display: flex;
+                    gap: 10px;
+                    align-items: center;
+                }
+            }
+        }
+    }
+}

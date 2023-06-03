@@ -4,12 +4,12 @@ import { useContext } from "react";
 import styles from './styles.module.scss'
 import Link from "next/link";
 
-function ShoppingList() {
+function BagButton() {
     const { productsForPurchaseOnLocalStorage } = useContext(LocalStorageContext);
 
     const productCount = productsForPurchaseOnLocalStorage.length;
     return (
-        <Link href='/cart'>
+        <Link href='/cart' className={styles.link} >
             <button
                 className={styles.favoriteButton}
                 aria-label="Lista de compras"
@@ -46,4 +46,4 @@ function ShoppingList() {
         </Link>
     )
 }
-export default ShoppingList;
+export default BagButton;

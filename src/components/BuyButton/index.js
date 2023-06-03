@@ -5,7 +5,7 @@ import { LocalStorageContext } from "@/hooks/useLocalStorage";
 
 const BuyButton = ({ product, soldout, removeBuy }) => {
     const [isProductSaved, setIsProductSaved] = useState(false);
-    const { productsForPurchaseOnLocalStorage, saveBuy } = useContext(LocalStorageContext);
+    const { productsForPurchaseOnLocalStorage, savePurchaseToLocalStorage } = useContext(LocalStorageContext);
 
     useEffect(() => {
         const isSaved = productsForPurchaseOnLocalStorage.some(
@@ -20,7 +20,7 @@ const BuyButton = ({ product, soldout, removeBuy }) => {
             return;
         }
 
-        saveBuy(product);
+        savePurchaseToLocalStorage(product);
         setIsProductSaved(!isProductSaved);
     };
     return (
@@ -31,6 +31,7 @@ const BuyButton = ({ product, soldout, removeBuy }) => {
             version="1.1"
             viewBox="0 0 32 32"
             onClick={handleSave}
+            className={styles.removeButton}
         >
             <g
                 fill="#000"

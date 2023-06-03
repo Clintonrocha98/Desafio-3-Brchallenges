@@ -31,7 +31,7 @@ export const LocalStorageProvider = ({ children }) => {
         setFavoriteProductsOnLocalStorage(updatedProducts);
     };
 
-    const saveBuy = (buy) => {
+    const savePurchaseToLocalStorage = (buy) => {
         const updatedBuys = [...productsForPurchaseOnLocalStorage];
         const existingBuyIndex = updatedBuys.findIndex(
             (savedBuy) => savedBuy === buy
@@ -49,7 +49,7 @@ export const LocalStorageProvider = ({ children }) => {
 
     return (
         <LocalStorageContext.Provider
-            value={{ favoriteProductsOnLocalStorage, saveProductToLocalStorage, productsForPurchaseOnLocalStorage, saveBuy }}
+            value={{ favoriteProductsOnLocalStorage, saveProductToLocalStorage, productsForPurchaseOnLocalStorage, savePurchaseToLocalStorage }}
         >
             {children}
         </LocalStorageContext.Provider>
