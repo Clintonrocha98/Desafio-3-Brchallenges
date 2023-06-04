@@ -3,6 +3,7 @@ import styles from "./styles.module.scss";
 import ShowNumber from "@/components/ShowNumber";
 import FavoriteIcon from "@/components/FavoriteIcon";
 import SizeGuide from "@/components/SizeGuide";
+import BuyButton from "@/components/BuyButton";
 
 async function Product({ params }) {
     const res = await fetch(
@@ -175,7 +176,7 @@ async function Product({ params }) {
                             </div>
                             <SizeGuide />
                         </div>
-                        <button className={styles.buy}>COMPRAR</button>
+                        <BuyButton product={product.name} soldout={product.soldout} />
                     </div>
                 </div>
                 <div className={styles.descriptionProduct}>

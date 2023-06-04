@@ -50,10 +50,16 @@
                 width: 100%;
                 gap: 20px;
                 border-bottom: 1px solid #cf5d00;
+
                 a {
                     display: flex;
                     gap: 10px;
                     text-decoration: none;
+
+                    @media screen and (max-width: 425px) {
+                        flex-direction: column;
+                    }
+
                     .infoContent {
                         display: flex;
                         flex-direction: column;
@@ -86,6 +92,9 @@
                     display: flex;
                     gap: 10px;
                     align-items: center;
+                    @media screen and (max-width: 425px) {
+                        flex-direction: column;
+                    }
                 }
             }
         }

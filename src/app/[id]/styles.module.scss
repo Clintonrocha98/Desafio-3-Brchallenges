@@ -133,34 +133,6 @@
                         }
                     }
                 }
-                .buy {
-                    align-self: center;
-                    max-width: 538px;
-                    width: 100%;
-                    height: 67px;
-                    border: none;
-
-                    font-family: "Poppins";
-                    font-weight: 400;
-                    font-size: 33.6887px;
-                    line-height: 110%;
-                    color: #ffffff;
-
-                    background: linear-gradient(
-                        122.71deg,
-                        #f99500 53.34%,
-                        #ffcd29 133.06%
-                    );
-                    border-radius: 5.61479px;
-
-                    cursor: pointer;
-                    transition: all 0.3s ease-in-out;
-
-                    &:hover {
-                        scale: 0.9;
-                        color: black;
-                    }
-                }
             }
         }
         .descriptionProduct {

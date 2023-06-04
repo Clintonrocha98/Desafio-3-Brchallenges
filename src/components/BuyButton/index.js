@@ -2,6 +2,7 @@
 import { useContext, useEffect, useState } from "react";
 import styles from "./styles.module.scss";
 import { LocalStorageContext } from "@/hooks/useLocalStorage";
+import toast from 'react-hot-toast';
 
 const BuyButton = ({ product, soldout, removeBuy }) => {
     const [isProductSaved, setIsProductSaved] = useState(false);
@@ -22,6 +23,17 @@ const BuyButton = ({ product, soldout, removeBuy }) => {
 
         savePurchaseToLocalStorage(product);
         setIsProductSaved(!isProductSaved);
+
+        if (!isProductSaved) {
+            toast('Adicionado ao carrinho!.', {
+                icon: '🛒',
+            })
+        }
+        else {
+            toast('Removido do carrinho!', {
+                icon: '🛒',
+            })
+        }
     };
     return (
         removeBuy ? <svg

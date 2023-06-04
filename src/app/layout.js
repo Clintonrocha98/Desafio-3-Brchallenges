@@ -3,6 +3,7 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Poppins, Montserrat } from "next/font/google";
 import { LocalStorageProvider } from "@/hooks/useLocalStorage";
+import { Toaster } from "react-hot-toast";
 
 const montserrat = Montserrat({
     subsets: ["latin"],
@@ -30,6 +31,7 @@ export default function RootLayout({ children }) {
             <html lang="pt-BR">
                 <body className={`${poppins.className}${montserrat.className}`}>
                     <LocalStorageProvider>
+                        <Toaster />
                         <Header />
                         {children}
                         <Footer />
